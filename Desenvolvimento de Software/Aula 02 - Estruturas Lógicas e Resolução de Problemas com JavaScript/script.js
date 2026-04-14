@@ -14,12 +14,34 @@ console.log(`1 != 2: ${1 != 2}`);
 console.log(`1 !== "1": ${1 !== "1"}`);
 console.log("");
 
-let idade = 18;
+let idade = 22;
 
-if (idade >= 18) {
+// múltiplas decisões
+if (idade === 18) {
+    console.log("Você acabou de ficar maior de idade!");
+} else if (idade > 18){
     console.log("É maior de idade!");
 } else {
     console.log("É menor de idade!");
 }
 
+console.log("");
+
+let periodo = "matutino";
+
+// casos
+switch (periodo) {
+    case "matutino":
+        console.log("Você estuda de manhã! Bom dia!")
+        break;
+    case "vespertino":
+        console.log("Você estuda de tarde! Boa tarde!")
+        break;
+    case "noturno":
+        console.log("Você estuda de noite! Boa noite!")
+        break;
+    default:
+        console.log("Ah, você não estuda!")
+        break;
+}
 
