@@ -98,7 +98,8 @@ quebraDeLinha();
 
 function soma(numero1, numero2) {
     resultado = numero1 + numero2;
-    return resultado;
+    return resultado; // se não tiver um "return + algo" a função entrega um "undefined" / void
+    // assim como o function, o return é uma palavra reservada
 }
 
 console.log(soma(1, 2));
