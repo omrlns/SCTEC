@@ -88,3 +88,10 @@ while (contador <= 10) {
     }
     contador += 1;
 }
+
+// function é uma palavra reservada
+function quebraDeLinha() {
+    console.log("");
+}
+
+quebraDeLinha();
