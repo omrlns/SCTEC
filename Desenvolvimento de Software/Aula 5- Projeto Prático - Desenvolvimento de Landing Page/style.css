@@ -1,0 +1,240 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+}
+
+h1, h2, h4 {
+ font-family: "Fredoka", sans-serif;
+}
+
+h1 {
+    font-size: 48px;
+}
+
+h2 {
+   color: #1f5e4a;
+   font-size: 40px;
+}
+
+/* cabeçalho */
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-left: 24px;
+    padding-right: 24px;
+}
+
+.amarelo {
+    color: #fac542;
+}
+
+.logotipo {
+    font-family: "Fredoka", sans-serif;
+    font-size: 40px;
+    font-weight: bold;
+    color: #1f5e4a;
+}
+
+.cabecalho {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 24px;
+}
+
+.cabecalho .menu {
+    display: flex;
+    gap: 16px;
+}
+
+.cabecalho .menu a {
+    text-decoration: none;
+    color: #1f5e4a;
+}
+
+.hamburguer {
+    display: none;
+}
+
+/* hero section */
+
+.hero {
+    background-color: #1f5e4a;
+    margin: 10px 20px;
+    border-radius: 30px;
+    color: white;
+    padding: 40px 0;
+    height: 70vh;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.hero_conteudo {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.hero .hero_acoes {
+    align-items: center;
+    display: flex;
+    gap: 16px;
+}
+
+.hero .hero_acoes a {
+    color: white;
+    text-decoration: none;
+}
+
+.hero .hero_acoes button {
+    padding: 16px 24px;
+    background-color: #fac542;
+    color: #1f5e4a;
+    border: 0;
+    border-radius: 10px;
+    font-weight: 600;
+}
+
+.hero_imagem img {
+    width: 500px;
+    position: absolute;
+    bottom: 0;
+    right: 64px;
+}
+
+@media (max-width: 768px) {
+    .hero .hero_conteudo {
+        align-items: center;
+        text-align: center;
+    }
+
+    .hero h1 {
+        font-size: 32px;
+    }
+    
+    .hero_imagem {
+        display: none;
+    }
+}
+
+.sobre {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-top: 64px;
+    margin-bottom: 64px;
+}
+
+.sobre_info {
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+    gap: 24px;
+}
+
+.sobre_info .sobre_conteudo {
+    flex: 1;
+}
+
+.sobre_info .sobre_imagem {
+    flex: 1;
+    aspect-ratio: 1 / 1;
+    background-color: #fac542;
+    border-radius: 30px;
+    padding: 24px 24px 0 24px;
+    display: flex;
+    justify-content: center;
+}
+
+.sobre_indicadores {
+    display: flex;
+    gap: 16px;
+    margin-top: 16px;
+}
+
+.sobre_indicadores .sobre_indicador_item {
+   display: flex;
+   flex-direction: column;
+   gap: 8px;
+}
+
+.sobre_indicadores .sobre_indicador_item strong {
+    font-family: "Fredoka", sans-serif;;
+    font-size: 40px;
+    color: #1f5e4a;
+}
+
+@media (max-width: 768px) {
+    .sobre_info {
+        flex-direction: column;
+    }
+}
+
+/* contato */
+
+.contato {
+    background:#1f5e4a;
+    color: white;
+    padding: 64px 0;
+}
+
+.contato .titulo_secao {
+    color: white;
+}
+
+.contato_container {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
+.contato_info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.contato_info p {
+    display: flex;
+    gap: 8px;
+}
+
+.contato_formulario {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.contato_formulario input {
+    width: 100%;
+    padding: 8px 16px;
+    border: 0;
+    border-radius: 8px;
+}
+
+.contato_formulario textarea {
+    width: 100%;
+    padding: 8px 16px;
+    border: 0;
+    border-radius: 8px;
+}
+
+.contato_formulario button {
+    padding: 8px 16px;
+    width: 100%;
+    border: 0;
+    border-radius: 8px;
+    background-color: #fac542;
+    color: #1f5e4a;
+    font-weight: bold;
+}
