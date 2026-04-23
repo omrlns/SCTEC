@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SCTEC - Aula 04</title>
+  </head>
+  <body>
+    <form>
+      <label for="nome">Nome: </label>
+      <input type="text" name="nome" id="nome" required/> <br>
+
+      <label for="email">Email: </label>
+      <input type="email" name="email" id="email" required/> <br>
+
+      <label for="telefone">Telefone: </label>
+      <input type="tel" name="telefone" id="telefone" required/> <br>
+
+      <label for="assunto">Assunto: </label>
+      <select name="assunto" id="assunto">
+        <option value="orcamento">Orçamento</option>
+        <option value="suporte">Suporte</option>
+        <option value="outro">Outro</option>
+      </select> <br> <br>
+
+      <label for="mensagem">Mensagem:</label> <br>
+      <textarea name="mensagem" id="mensagem" cols="30" rows="10" required></textarea> <br>
+
+      <input type="checkbox" id="inscricao" name="inscricao">
+      <label for="inscricao">Deseja receber novidades? Fique por dentro!</label> <br> <br>
+
+      <input type="submit" name="enviar" id="enviar">
+
+    </form>
+  </body>
+</html>
