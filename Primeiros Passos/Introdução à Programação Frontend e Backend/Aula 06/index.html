@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SCTEC - Aula 06</title>
+</head>
+<body>
+    <header>
+        <h1>Formulário de Inscrição</h1>
+    </header>
+    <main>
+        <section>
+            <label for="nome">Nome:</label>
+            <input type="text" name="nome" id="nome" placeholder="Digite o seu nome completo"> <br>
+
+            <label for="email">Email:</label>
+            <input type="email" name="email" id="email" placeholder="Digite o seu email"> <br>
+
+            <label for="idade">Idade:</label>
+            <input type="number" name="idade" id="idade" placeholder="Digite a sua idade">
+
+            <br>
+            <br>
+
+            <label for="escolaridade">Qual o seu nível de escolaridade?</label> <br>
+            <select name="escolaridade" id="escolaridade">
+                <option value="superior">Ensino Superior Completo</option>
+                <option value="cursando_mestrado">Cursando Mestrado</option>
+                <option value="mestrado_completo">Mestrado Completo</option>
+                <option value="cursando_doutorado">Cursando Doutorado</option>
+                <option value="doutorado_completo">Doutorado Completo</option>            
+            </select>
+
+            <br>
+            <br>
+
+            <label for="materia">Para qual matéria você está se candidatando?</label> <br>
+            <select name="materia" id="materia">
+                <option value="matematica">Matemática</option>
+                <option value="portugues">Português</option>
+                <option value="biologia">Biologia</option>
+                <option value="ciencias">Ciências</option>
+                <option value="historia">História</option>
+                <option value="geografia">Geografia</option>
+                <option value="artes">Artes</option>             
+            </select>
+
+            <br>
+            <br>
+
+            <label for="sobre">Agora é o seu momento candidato(a)! Fale sobre você!</label> <br>
+            <textarea name="sobre" id="sobre" cols="45" rows="10"></textarea>
+        </section>
+    </main>
+</body>
+</html>
