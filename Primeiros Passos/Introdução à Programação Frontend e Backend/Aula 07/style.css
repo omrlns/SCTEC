@@ -1,0 +1,10 @@
+/* cascade style sheet */
+p {
+    text-transform: uppercase;
+    text-align: center;
+    font-family: "Roboto", sans-serif;
+    font-size: 20px;
+    color: white;
+    background-color: black;
+    padding: 10px;
+}
