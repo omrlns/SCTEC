@@ -4,3 +4,16 @@ p {
     text-align: center;
     padding: 10px; /* propriedade opcional */
 }
+
+/* complemento do desafio */
+.primeiro {
+    color: white;
+    background-color: black;
+    font-size: 16px;
+}
+
+#segundo {
+    color: antiquewhite;
+    background-color: darkgreen;
+    font-size: 18px;
+}
