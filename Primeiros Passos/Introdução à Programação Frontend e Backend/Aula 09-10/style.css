@@ -1,0 +1,52 @@
+.class {
+    color: red;
+}
+
+#id {
+    color: blue;
+}
+
+h3 {
+    font-family: "Roboto", sans-serif;
+}
+
+p {
+    color: yellow;
+    background-color: black;
+    text-align: center;
+}
+
+article {
+    background-color: gray;
+    color: aliceblue;
+    padding: 10px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 20px;
+}
+
+/* seletor "irmão adjacente" */
+p + a {
+    color: darkmagenta ;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+/* seletor "irmão */
+p ~ h4 {
+    text-transform: uppercase;
+    text-align: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: green;
+}
+
+/* seletor filho */
+p > a {
+    color: white;
+    text-decoration: none;
+    cursor: cell;
+}
+
+/* seletor descendente */
+div p {
+    padding: 10px;
+}
