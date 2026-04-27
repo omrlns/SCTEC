@@ -442,7 +442,7 @@ totais = (
 vendas_por_categoria = df.groupby('categoria')['total'].sum().reset_index()
 
 print("Soma do Valor Total por Categoria:")
-display(vendas_por_categoria.head()) # display é um método fictício
+# display(vendas_por_categoria.head()) # display é um método fictício
 # este código agrupa todas as vendas por categoria de produto e soma o valor total de cada categoria
 
 # sort_values - RANKING DE CATEGORIAS MAIS LUCRATIVAS
@@ -453,7 +453,7 @@ display(vendas_por_categoria.head()) # display é um método fictício
 # ordenamos do MAIOR para o MENOR (ascending=False)
 vendas_por_categoria = vendas_por_categoria.sort_values(by='total', ascending=False)
 print("Soma do Valor Total por Categoria:")
-display(vendas_por_categoria.head()) # display é um método fictício
+# display(vendas_por_categoria.head()) # display é um método fictício
 # neste trecho, continuamos de onde paramos anterioremente com a Series vendas_por_categoria.
 # aplicamos sort_values(ascending=False) para listar as categorias do maior para o menor valor de receita.
 # o poder do groupby se expande quando você o aplica a múltiplas dimensões. 
