@@ -1,0 +1,48 @@
+/* remove as margens padrão do navegador para o layout preencher melhor */
+body {
+    margin: 0;
+    padding: 10px; /* dá uma borda branca ao redor de toda a página */
+    font-family: sans-serif;
+}
+
+/* estilos gerais para todos os blocos */
+.header, .menu, .coluna, .footer {
+    background-color: #e6e8eb;
+    font-size: 28px;
+    /* as três linhas abaixo centralizam o texto perfeitamente no meio do bloco */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* blocos horizontais */
+.header {
+    height: 80px;
+}
+
+.menu {
+    height: 50px;
+    margin-top: 10px; /* cria o espaço em branco entre o cabeçalho e o menu */
+}
+
+.footer {
+    height: 60px;
+    margin-top: 10px; /* cria o espaço acima do rodapé */
+}
+
+/* container das colunas */
+.container-colunas {
+    display: flex; /* coloca os itens internos lado a lado */
+    gap: 10px; /* cria automaticamente as faixas brancas entre as colunas */
+    margin-top: 10px; /* espaço em branco abaixo do menu */
+    height: 250px; /* define a altura das colunas, parecido com o objetivo do desafio */
+}
+
+/* proporções das colunas */
+.left, .right {
+    flex: 1; /* ocupa 1 do espaço total */
+}
+
+.mid {
+    flex: 3; /* ocupa 3 do espaço total, ficando mais largo que as colunas laterais */
+}
