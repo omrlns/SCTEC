@@ -1,0 +1,178 @@
+/* https://flexboxfroggy.com/ */
+
+/* LEVEL 01 */
+#pond {
+    display: flex;
+    justify-content: flex-end
+}
+
+/* LEVEL 02 */
+#pond {
+    display: flex;
+    justify-content: center;
+}
+
+/* LEVEL 03 */
+#pond {
+    display: flex;
+    justify-content: space-around;
+}
+
+/* LEVEL 04 */
+#pond {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* LEVEL 05 */
+#pond {
+    display: flex;
+    align-items: flex-end;
+}
+
+/* LEVEL 06 */
+#pond {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* LEVEL 07 */
+#pond {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end;
+}
+
+/* LEVEL 08 */
+#pond {
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+/* LEVEL 09  */
+#pond {
+    display: flex;
+    flex-direction: column;
+}
+
+/* LEVEL 10 */
+#pond {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: start;
+}
+
+/* LEVEL 11 */
+#pond {
+    display: flex;
+    flex-direction: column;
+    /* notice that when the flex direction is a column, justify-content changes to the vertical and align-items to the horizontal. */
+    justify-content: end;
+}
+
+/* LEVEL 12 */
+#pond {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: space-between;
+}
+
+/* LEVEL 13 */
+#pond {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+/* LEVEL 14 */
+#pond {
+    display: flex;
+}
+
+.yellow {
+    order: 1;
+}
+
+/* LEVEL 15 */
+#pond {
+    display: flex;
+}
+
+.red {
+    order: -2;
+}
+
+/* LEVEL 16 */
+#pond {
+    display: flex;
+    align-items: flex-start;
+}
+
+.yellow {
+    /* another property you can apply to individual items is align-self. This property accepts the same values as align-items and its value for the specific item. */
+    align-self: flex-end;
+}
+
+/* LEVEL 17 */
+#pond {
+    display: flex;
+    align-items: flex-start;
+}
+
+.yellow {
+    order: 1;
+    align-self: flex-end;
+}
+
+/* LEVEL 18 */
+#pond {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* LEVEL 19 */
+#pond {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+/* LEVEL 20 */
+#pond {
+    display: flex;
+    flex-flow: column wrap;
+}
+
+/* LEVEL 21 */
+#pond {
+    display: flex;
+    flex-wrap: wrap;
+    /* this can be confusing, but align-content determines the spacing between lines, while align-items determines how the items as a whole are aligned within the container. when there is only one line, align-content has no effect. */
+    align-content: flex-start;
+}
+
+/* LEVEL 22 */
+#pond {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-end;
+}
+
+/* LEVEL 23 */
+#pond {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column-reverse;
+    align-content: center;
+}
+
+/* LEVEL 24 */
+#pond {
+    display: flex;
+    flex-flow: column-reverse wrap-reverse;
+    justify-content: center;
+    align-items: flex-end;
+    align-content: space-between;
+}
