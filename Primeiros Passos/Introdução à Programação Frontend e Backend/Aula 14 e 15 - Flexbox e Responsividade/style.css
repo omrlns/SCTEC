@@ -1,3 +1,7 @@
+h2 {
+    text-align: center;
+}
+
 .container-row {
     background-color: darkgrey;
     font-family: Arial, Helvetica, sans-serif;
@@ -52,4 +56,44 @@
 
 #box-title {
     background-color: yellow;
+}
+
+.container-justify-right {
+    background-color: darkgrey;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 10px;
+    display: flex;
+    justify-content: right;
+}
+
+.container-justify-center {
+    background-color: darkgrey;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+.container-justify-around {
+    background-color: darkgrey;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 10px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.container-justify-btw {
+    background-color: darkgrey;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.container-justify-evenly {
+    background-color: darkgrey;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 10px;
+    display: flex;
+    justify-content: space-evenly;
 }
