@@ -1,0 +1,56 @@
+/* remove as margens padrão do navegador para o layout preencher melhor */
+body {
+    margin: 0;
+    padding: 10px;
+    /* dá uma borda branca ao redor de toda a página */
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    background-color: lightgray;
+}
+
+h1,
+h2,
+.texto-copy {
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: bold;
+
+    color: #fff;
+}
+
+header {
+    background-color: gray;
+    padding: 20px;
+}
+
+main {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.content {
+    background-color: gray;
+    padding: 20px;
+    border-radius: 3px;
+}
+
+footer {
+    background-color: gray;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+section:hover {
+    background-color: black;
+    color: #fff;
+    transition: 0.5s;
+}
+
+h2:hover {
+    color: gold;
+}
