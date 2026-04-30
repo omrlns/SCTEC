@@ -121,7 +121,7 @@ df["margem_lucro"] = np.where(
     0
 )
 
-print(df['margem_lucro'].head())
+# print(df['margem_lucro'].head())
 
 # 0    16.00
 # 1    30.00
@@ -178,3 +178,41 @@ df["modo_envio"] = df["modo_envio"].map({
     "First Class": "Primeira Classe",
     "Same Day": "Mesmo Dia"
 })
+
+# filtar apenas os anos de 2016-2017
+linhas_antes = len(df)
+# print(linhas_antes) # saída: 9994
+
+df = df[df["ano"].isin([2016, 2017])].copy()
+
+linhas_depois = len(df)
+# print(linhas_depois) # saída: 5899
+
+# print(f"Linhas Antes do Filtro: {linhas_antes:,}")
+# print(f"Linhas Depois do Filtro: {linhas_depois:,}")
+# print(f"Linhas Removidas: {linhas_antes - linhas_depois:,}")
+
+# Linhas Antes do Filtro: 9,994
+# Linhas Depois do Filtro: 5,899
+# Linhas Removidas: 4,095
+
+# verifica a distribuição por ano e mês após o filtro
+dist = df.groupby(["ano", "mes"]).size().reset_index(name="registros")
+# print("Registros por Mês (2016-2017):")
+# print(dist.pivot(index="mes", columns="ano", values="registros").fillna(0).astype(int).to_string())
+
+# Registros por Mês (2016-2017):
+# ano  2016  2017
+# mes            
+# 1      89   155
+# 2      83   107
+# 3     163   238
+# 4     170   203
+# 5     225   242
+# 6     199   245
+# 7     201   226
+# 8     176   218
+# 9     363   459
+# 10    196   298
+# 11    370   459
+# 12    352   462
