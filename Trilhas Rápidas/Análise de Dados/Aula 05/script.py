@@ -7,6 +7,7 @@ import matplotlib.ticker as mticker
 import seaborn as sns
 import plotly.express as px
 import plotly.graph_objects as go
+import numpy as np
 from plotly.subplots import make_subplots
 
 warnings.filterwarnings("ignore")
@@ -100,3 +101,30 @@ df = df.rename(columns=traducao_colunas)
 
 df.drop_duplicates(inplace=True)
 # print(len(df)) # saída: 9994
+
+# mudando as colunas em específico de objeto para datetime
+df["data_pedido"] = pd.to_datetime(df["data_pedido"])
+df["data_envio"] = pd.to_datetime(df["data_envio"])
+
+# extração de componentes de data
+df["ano"] = df["data_pedido"].dt.year
+df["mes"] = df["data_pedido"].dt.month
+df["nome_mes"] = df["data_pedido"].dt.strftime("%b") # jan, fev, ...
+
+# dias de entrega: quanto tempo levou para o cliente receber o pedido?
+df["dias_entrega"] = (df["data_envio"] - df["data_pedido"]).dt.days
+
+# margem de lucro por transação (%)]
+df["margem_lucro"] = np.where(
+    df["vendas"] != 0,
+    (df["lucro"] / df["vendas"] * 100).round(2),
+    0
+)
+
+print(df['margem_lucro'].head())
+
+# 0    16.00
+# 1    30.00
+# 2    47.00
+# 3   -40.00
+# 4    11.25
