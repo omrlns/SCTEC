@@ -60,3 +60,27 @@ df = pd.read_csv(arquivo_csv, encoding="latin1", dtype={"Postal Code": str}) # d
 # 50%    4997.500000     54.490000     3.000000     0.200000     8.666500
 # 75%    7495.750000    209.940000     5.000000     0.200000    29.364000
 # max    9994.000000  22638.480000    14.000000     0.800000  8399.976000
+
+traducao_colunas = {
+    "Row ID": "id_linha",
+    "Order ID": "id_pedido",
+    "Order Date": "data_pedido",
+    "Ship Date": "data_envio",
+    "Ship Mode": "modo_envio",
+    "Customer ID": "id_cliente",
+    "Customer Name": "nome_cliente",
+    "Segment": "segmento",
+    "Country": "pais",
+    "City": "cidade",
+    "State": "estado",
+    "Postal Code": "cep",
+    "Region": "regiao",
+    "Product ID": "id_produto",
+    "Category": "categoria",
+    "Sub-Category": "subcategoria",
+    "Product Name": "nome_produto",
+    "Sales": "vendas",
+    "Quantity": "quantidade",
+    "Discount": "desconto",
+    "Profit": "lucro"
+}
