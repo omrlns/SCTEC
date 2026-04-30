@@ -84,3 +84,19 @@ traducao_colunas = {
     "Discount": "desconto",
     "Profit": "lucro"
 }
+
+df = df.rename(columns=traducao_colunas)
+# print(df.head())
+
+#    id_linha       id_pedido data_pedido  data_envio      modo_envio id_cliente     nome_cliente   segmento           pais  ... regiao       id_produto        categoria subcategoria                                       nome_produto    vendas quantidade desconto     lucro
+# 0         1  CA-2016-152156   11/8/2016  11/11/2016    Second Class   CG-12520      Claire Gute   Consumer  United States  ...  South  FUR-BO-10001798        Furniture    Bookcases                  Bush Somerset Collection Bookcase  261.9600          2     0.00   41.9136
+# 1         2  CA-2016-152156   11/8/2016  11/11/2016    Second Class   CG-12520      Claire Gute   Consumer  United States  ...  South  FUR-CH-10000454        Furniture       Chairs  Hon Deluxe Fabric Upholstered Stacking Chairs,...  731.9400          3     0.00  219.5820
+# 2         3  CA-2016-138688   6/12/2016   6/16/2016    Second Class   DV-13045  Darrin Van Huff  Corporate  United States  ...   West  OFF-LA-10000240  Office Supplies       Labels  Self-Adhesive Address Labels for Typewriters b...   14.6200          2     0.00    6.8714
+# 3         4  US-2015-108966  10/11/2015  10/18/2015  Standard Class   SO-20335   Sean O'Donnell   Consumer  United States  ...  South  FUR-TA-10000577        Furniture       Tables      Bretford CR4500 Series Slim Rectangular Table  957.5775          5     0.45 -383.0310
+# 4         5  US-2015-108966  10/11/2015  10/18/2015  Standard Class   SO-20335   Sean O'Donnell   Consumer  United States  ...  South  OFF-ST-10000760  Office Supplies      Storage                     Eldon Fold 'N Roll Cart System   22.3680          2     0.20    2.5164
+
+# tamanho atual do dataframe
+# print(len(df)) # saída: 9994
+
+df.drop_duplicates(inplace=True)
+# print(len(df)) # saída: 9994
