@@ -10,6 +10,14 @@ import plotly.graph_objects as go
 import numpy as np
 from plotly.subplots import make_subplots
 
+"""
+- **pandas**: para manipulação de tabelas de dados
+- **numpy**: para cálculos numéricos
+- **matplotlib** e **seaborn**: para criar gráficos estáticos
+- **plotly**: para criar gráficos interativos
+- **kagglehub**: para baixar o dataset diretamente do Kaggle
+"""
+
 warnings.filterwarnings("ignore")
 
 # configurações visuais padrão para gráficos matplotlib/seaborn
@@ -23,6 +31,9 @@ arquivo_csv = os.path.join(os.path.dirname(__file__), "data", "superstore.csv")
 df = pd.read_csv(arquivo_csv, encoding="latin1", dtype={"Postal Code": str}) # df = dataframe
 # print(df.head())
 # print(df.tail())
+
+# exibe informações sobre os tipos de dados de cada coluna
+# 'object' = texto, 'int64' = número inteiro, 'float64' = número decimal
 # print(df.info())
 
 # #   Column         Non-Null Count  Dtype  
@@ -95,6 +106,12 @@ df = df.rename(columns=traducao_colunas)
 # 2         3  CA-2016-138688   6/12/2016   6/16/2016    Second Class   DV-13045  Darrin Van Huff  Corporate  United States  ...   West  OFF-LA-10000240  Office Supplies       Labels  Self-Adhesive Address Labels for Typewriters b...   14.6200          2     0.00    6.8714
 # 3         4  US-2015-108966  10/11/2015  10/18/2015  Standard Class   SO-20335   Sean O'Donnell   Consumer  United States  ...  South  FUR-TA-10000577        Furniture       Tables      Bretford CR4500 Series Slim Rectangular Table  957.5775          5     0.45 -383.0310
 # 4         5  US-2015-108966  10/11/2015  10/18/2015  Standard Class   SO-20335   Sean O'Donnell   Consumer  United States  ...  South  OFF-ST-10000760  Office Supplies      Storage                     Eldon Fold 'N Roll Cart System   22.3680          2     0.20    2.5164
+
+# verifica a quantidade e o percentual de valores nulos por coluna
+nulos = pd.DataFrame({
+    "Quantidade": df.isnull().sum(),
+    "Percentual (%)": (df.isnull().sum() / len(df) * 100).round(2)
+})
 
 # tamanho atual do dataframe
 # print(len(df)) # saída: 9994
@@ -216,3 +233,48 @@ dist = df.groupby(["ano", "mes"]).size().reset_index(name="registros")
 # 10    196   298
 # 11    370   459
 # 12    352   462
+
+# visualiza o dataset após a limpeza
+print(df[['data_pedido', 'categoria', 'segmento', 'regiao', 'vendas', 'lucro', 'desconto', 'margem_lucro', 'dias_entrega']].head(10))
+
+#    data_pedido   categoria     segmento   regiao   vendas     lucro  desconto  margem_lucro  dias_entrega
+# 0   2016-11-08      Móveis   Consumidor      Sul  261.960   41.9136       0.0         16.00             3
+# 1   2016-11-08      Móveis   Consumidor      Sul  731.940  219.5820       0.0         30.00             3
+# 2   2016-06-12   Papelaria  Corporativo    Oeste   14.620    6.8714       0.0         47.00             4
+# 12  2017-04-15   Papelaria   Consumidor      Sul   15.552    5.4432       0.2         35.00             5
+# 13  2016-12-05   Papelaria   Consumidor    Oeste  407.976  132.5922       0.2         32.50             5
+# 21  2016-12-09   Papelaria  Corporativo  Central   19.460    5.0596       0.0         26.00             4
+# 22  2016-12-09   Papelaria  Corporativo  Central   60.340   15.6884       0.0         26.00             4
+# 23  2017-07-16      Móveis   Consumidor    Leste   71.372   -1.0196       0.3         -1.43             2
+# 25  2016-01-16   Papelaria   Consumidor    Oeste   11.648    4.2224       0.2         36.25             4
+# 26  2016-01-16  Tecnologia   Consumidor    Oeste   90.570   11.7741       0.0         13.00             4
+
+# distribuição de vendas
+# usamos o percentil 95 como limite do eixo X para focar onde está a maioria dos dados
+# os outliers existem, mas não precisam distorcer a visualização
+
+p95_vendas = df["vendas"].quantile(0.99)  # valor que cobre 95% dos dados
+media_vendas = df["vendas"].mean()
+mediana_vendas = df["vendas"].median()
+
+fig, ax = plt.subplots(figsize=(12, 5))
+
+ax.hist(df["vendas"], bins=60, color="steelblue", edgecolor="white", alpha=0.85)
+ax.axvline(media_vendas,   color="red",    linestyle="--", linewidth=1.5, label=f"Média: ${media_vendas:.0f}")
+ax.axvline(mediana_vendas, color="orange", linestyle="--", linewidth=1.5, label=f"Mediana: ${mediana_vendas:.0f}")
+
+ax.set_xlim(0, p95_vendas)
+ax.set_title("Distribuição de Vendas por Transação", fontsize=14)
+ax.set_xlabel("Valor da venda (USD)")
+ax.set_ylabel("Frequência")
+ax.legend()
+
+pct_outlier = (df["vendas"] > p95_vendas).mean() * 100
+ax.text(0.98, 0.95, f"* {pct_outlier:.0f}% dos dados estão\nacima de ${p95_vendas:.0f} (fora do gráfico)",
+        transform=ax.transAxes, ha="right", va="top", fontsize=9, color="gray")
+
+plt.tight_layout()
+plt.show()
+
+# print("\nEstatísticas de Vendas:")
+df["vendas"].describe().apply(lambda x: f"${x:,.2f}") # colocar o print para visualização
