@@ -128,3 +128,53 @@ print(df['margem_lucro'].head())
 # 2    47.00
 # 3   -40.00
 # 4    11.25
+
+# tradução das categorias para português
+df["categoria"] = df["categoria"].map({
+    "Furniture": "Móveis",
+    "Office Supplies": "Papelaria",
+    "Technology": "Tecnologia"
+})
+
+# tradução das subcategorias para o português
+df["subcategoria"] = df["subcategoria"].map({
+    "Bookcases": "Estantes",
+    "Chairs": "Cadeiras",
+    "Tables": "Mesas",
+    "Furnishings": "Mobiliário",
+    "Appliances": "Eletrodomésticos",
+    "Art": "Arte",
+    "Binders": "Fichários",
+    "Envelopes": "Envelopes",
+    "Fasteners": "Grampos",
+    "Labels": "Etiquetas",
+    "Storage": "Armazenamento",
+    "Supplies": "Suprimentos",
+    "Accessories": "Acessórios",
+    "Copiers": "Copiadoras",
+    "Machines": "Máquinas",
+    "Phones": "Telefones"
+})
+
+# tradução dos segmentos para português
+df["segmento"] = df["segmento"].map({
+    "Consumer": "Consumidor",
+    "Corporate": "Corporativo",
+    "Home Office": "Home Office"
+})
+
+# tradução das regiões para português
+df["regiao"] = df["regiao"].map({
+    "West": "Oeste",
+    "East": "Leste",
+    "Central": "Central",
+    "South": "Sul"
+})
+
+# tradução dos modos de envio
+df["modo_envio"] = df["modo_envio"].map({
+    "Standard Class": "Padrão",
+    "Second Class": "Segunda Classe",
+    "First Class": "Primeira Classe",
+    "Same Day": "Mesmo Dia"
+})
