@@ -1,17 +1,25 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SCTEC - Aula 19</title>
 </head>
+
 <body>
-    <h2>Aula 19: Introdução à Manipulação de Elementos Páginas Web e Switch-Case</h2>
-    <div id="element-a" class="divTrocarCor">Elemento A</div>
-    <div id="element-b" class="divTrocarCor">Elemento B</div>
-    <div id="element-c" class="divTrocarCor">Elemento C</div>
-    <button id="btnTrocarCor" onclick="trocarCor()">Trocar a Cor</button>
-    <button id="btnResetarCor" onclick="resetarCor()">Resetar Padrão</button>
+    <h1>Calculadora de Operações Básicas</h1>
+    <input type="text" id="valorX" placeholder="Digite o primeiro valor">
+    <select name="operadores" id="operadores">
+        <option value="somar">➕</option>
+        <option value="subtrair">➖</option>
+        <option value="multiplicar">✖️</option>
+        <option value="dividir">➗</option>
+    </select>
+    <input type="text" id="valorY" placeholder="Digite o segundo valor">
+    <button onclick="calcular()">CALCULAR</button>
+    <strong><p id="resultado"></p></strong>
     <script src="script.js"></script>
 </body>
+
 </html>
