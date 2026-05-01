@@ -1,9 +1,9 @@
 REQUISITOS DO DESAFIO DA AULA 18 - Tipos de Dados, Escopo If-else e Operadores 2/2
 
-1. criar uma página html básica com um título, descrição da atividade e espaço para inserção de dados pelo usuário;
-2. adicionar dois campos de entrada (input): um para o preço original do produto e o outro para a porcentagem de desconto;
-3. incluir um botão que, ao ser clicado, execute uma função javascript para calcular o preço final após o desconto;
-4. a função deve usar operadores para calcular o valor do desconto e o preço final;
-5. usar estruturar condicionais if-else para verificar se os valores inseridos são válidos,
-    (por exemplo, preços ou porcentagens negativas não são permitidas);
-6. exibir o resultado usando console.log e alert para mostrar o preço original, o valor do desconto e o preço final.
+1. criar uma página html básica com um título, descrição da atividade e espaço para inserção de dados pelo usuário; ✅
+2. adicionar dois campos de entrada (input): um para o preço original do produto e o outro para a porcentagem de desconto; ✅
+3. incluir um botão que, ao ser clicado, execute uma função javascript para calcular o preço final após o desconto; ✅
+4. a função deve usar operadores para calcular o valor do desconto e o preço final; ✅
+5. usar estruturar condicionais if-else para verificar se os valores inseridos são válidos, 
+    (por exemplo, preços ou porcentagens negativas não são permitidas); ✅
+6. exibir o resultado usando console.log e alert para mostrar o preço original, o valor do desconto e o preço final. ✅
