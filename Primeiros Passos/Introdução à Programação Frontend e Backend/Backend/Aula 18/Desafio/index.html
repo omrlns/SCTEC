@@ -5,22 +5,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SCTEC - Desafio da Aula 18</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <main>
-        <div>
-            <h1>Calcular Desconto do Produto</h1>
-            <p>essa é a minha resolução do desafio da AULA 18, que consistia na criação de um programa que calculasse o preço final de um "produto" com base no valor orignal e desconto informados nas caixas de entrada (inputs).</p>
-            <label>Preço do Produto:</label>
-            <input type="text" id="preco" placeholder="R$">
-            <br>
-            <label>Desconto:</label>
-            <input type="text" id="desconto" placeholder="%">
-            <br>
+    <div class="card-container">
+        <h1>Calcular Preço Final do Produto</h1>
+        <div class="quote-container">
+            <blockquote>
+            Essa é a minha resolução do <span class="bold">SCTEC - Desafio da Aula 18</span>, <br>que solicita a criação
+            de um programa que
+            calculasse o preço final de um "produto" com base no valor orignal e desconto <br>informados nas caixas
+            de entrada (inputs).
+        </blockquote>
+        </div>
+        <div class="formulario">
+            <div class="campo">
+                <label>Preço do Produto:</label>
+                <input type="text" id="preco" placeholder="R$">
+            </div>
+            <div class="campo">
+                <label>Desconto:</label>
+                <input type="text" id="desconto" placeholder="%">
+            </div>
             <button onclick="calcularPrecoFinal()" id="calcular">Calcular</button>
         </div>
-    </main>
+    </div>
     <script src="script.js"></script>
 </body>
 
