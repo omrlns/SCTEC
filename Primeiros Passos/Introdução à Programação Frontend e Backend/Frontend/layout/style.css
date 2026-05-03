@@ -1,109 +1,95 @@
-/* Reset básico para evitar problemas de espaçamento */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
-
 body {
-    background-color: #f4f7f6; /* Fundo leve para destacar o card */
-    display: flex;
-    justify-content: center; /* Centraliza no eixo X */
-    min-height: 100vh;
-    padding-top: 50px; /* Margem do topo */
+    background-color: #f0f2f5;
+    /* Um cinza claro para o fundo da página inteira */
+    margin: 0;
+    padding: 20px;
+    font-family: Arial, sans-serif;
 }
 
-.card {
-    background-color: white;
-    width: 90%;
-    max-width: 500px;
-    padding: 40px;
-    border-radius: 12px;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
-    height: fit-content; /* O card se ajusta ao conteúdo */
-}
-
-.card-header {
+h1 {
     text-align: center;
-    margin-bottom: 30px;
 }
 
-.card-header h1 {
-    font-size: 1.5rem;
-    color: #333;
-    margin-bottom: 10px;
-}
-
-.descricao {
-    font-size: 0.9rem;
-    color: #666;
-    font-style: italic;
-    line-height: 1.4;
-}
-
-/* Estrutura dos Campos */
-.formulario {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-}
-
-.input-group {
-    display: flex;
-    align-items: center;
-}
-
-.input-group label {
-    flex: 1;
-    text-align: right;
-    margin-right: 20px;
-    font-weight: 600;
-    color: #444;
-}
-
-.input-group input {
-    flex: 2;
-    padding: 10px;
-    border: 1px solid #ddd;
-    border-radius: 6px;
-    outline: none;
-    transition: border-color 0.3s;
-}
-
-.input-group input:focus {
-    border-color: #007bff;
-}
-
-/* Botão Estilizado */
 button {
     width: 100%;
+    /* ocupa toda a largura do container .formulario */
     padding: 12px;
     background-color: #007bff;
     color: white;
     border: none;
     border-radius: 6px;
-    font-size: 1rem;
-    font-weight: bold;
     cursor: pointer;
-    transition: all 0.2s;
+    font-weight: bold;
+    font-size: 1rem;
 }
 
 button:hover {
     background-color: #0056b3;
-    box-shadow: 0 4px 12px rgba(0, 123, 255, 0.3);
+    /* efeito de cor ao passar o mouse */
 }
 
-/* Área de Resultado */
-.resultado {
-    margin-top: 25px;
+.card-container {
+    background-color: white;
+    /* cor do "retângulo" interno */
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    /* arredonda os cantos levemente */
+    padding: 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* dá profundidade */
+
+    /* CENTRALIZAÇÃO NO EIXO X */
+    width: 90%;
+    /* ocupa 90% da tela em celulares */
+    max-width: 600px;
+    /* não passa de 600px em telas grandes */
+    margin: 50px auto;
+    /* 50px de topo e 'auto' nas laterais centraliza no X */
+
     text-align: center;
-    color: #28a745; /* Verde para sucesso */
-    font-size: 1.1rem;
+    /* garante que o texto dentro dele fique centralizado */
 }
 
-.resultado hr {
-    border: 0;
-    border-top: 1px solid #eee;
-    margin-bottom: 15px;
+/* container que agrupa os campos e o botão */
+.formulario {
+    max-width: 350px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    /* Cria um espaço uniforme entre os campos e o botão */
+}
+
+.campo {
+    display: flex;
+    align-items: center;
+    margin-bottom: 12px;
+}
+
+.campo label {
+    flex: 1;
+    text-align: right;
+    /* faz o texto do label encostar no input */
+    margin-right: 15px;
+    /* espaço pequeno e controlado entre label e input */
+    font-weight: bold;
+    white-space: nowrap;
+    /* impede que o label quebre em duas linhas */
+}
+
+.campo input {
+    flex: 1.5;
+    /* proporção do input em relação ao label */
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.quote-container blockquote {
+    font-style: italic;
+    background-color: #f0f2f5;
 }
