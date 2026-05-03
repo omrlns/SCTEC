@@ -1,0 +1,5 @@
+REQUISITOS DO DESAFIO DA AULA 23 -  Controle de Fluxo: Laços de Repetição [3/3]
+
+1. utilizar a estrutura do-while para percorrer uma lista predefinida de carros;
+2. mostrar um carro por iteração e perguntar se deseja continuar para o próximo;
+3. parar o loop quando usuário não decidir não continuar;
