@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SCTEC - Desafio da Aula 19</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="card-container">
+        <h1>Saudação!</h1>
+        <div class="quote-container">
+            <blockquote>
+                Essa é a minha resolução do <span class="bold">SCTEC - Desafio da Aula 19</span>, <br>que solicita a
+                criação
+                de um programa que permita o usuário escolher um idioma (dentro os pré-difinidos) para a visualização de
+                uma saudação com "tradução"!
+            </blockquote>
+        </div>
+        <div class="formulario">
+            <div class="campo">
+                <label>Escolha um Idioma:</label>
+                <select name="idiomas" id="idiomas">
+                    <option value="portugues">Português</option>
+                    <option value="ingles">Inglês</option>
+                    <option value="alemao">Alemão</option>
+                    <option value="espanhol">Espanhol</option>
+                    <option value="frances">Francês</option>
+                    <option value="italiano">Italiano</option>
+                    <option value="grego">Grego</option>
+                    <option value="russo">Russo</option>
+                    <option value="japones">Japonês</option>
+                    <option value="chines">Chinês</option>
+                </select>
+            </div>
+            <button onclick="traduzir()" id="traduzir">👋</button>
+
+            <div id="resultado" class="resultado-container">
+                <p id="texto-saudacao"></p>
+            </div>
+
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
