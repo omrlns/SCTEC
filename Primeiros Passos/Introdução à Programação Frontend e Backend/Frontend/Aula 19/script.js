@@ -23,7 +23,7 @@ function calcular() {
             }
             break;
         default:
-            resultado = "Operador inválido! Tente novamente!"
+            resultado = "Operador inválido! Tente novamente!";
     }
 
     document.getElementById("resultado").innerHTML = `Resultado da Operação: ${resultado}`;

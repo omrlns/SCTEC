@@ -4,34 +4,34 @@ function traduzir() {
 
     switch (idioma) {
         case "portugues":
-            saudacao = "Olá, seja bem-vindo(a)!"
+            saudacao = "Olá, seja bem-vindo(a)!";
             break;
         case "ingles":
-            saudacao = "Hello, welcome!"
+            saudacao = "Hello, welcome!";
             break;
         case "alemao":
-            saudacao = "Hallo, willkommen!"
+            saudacao = "Hallo, willkommen!";
             break;
         case "espanhol":
-            saudacao = "¡Hola, bienvenido(a)!"
+            saudacao = "¡Hola, bienvenido(a)!";
             break;
         case "frances":
-            saudacao = "Bonjour, bienvenue!"
+            saudacao = "Bonjour, bienvenue!";
             break;
         case "italiano":
-            saudacao = "Ciao, benvenuto(a)!"
+            saudacao = "Ciao, benvenuto(a)!";
             break;
         case "grego":
-            saudacao = "Γεια σας, καλώς ορίσατε!"
+            saudacao = "Γεια σας, καλώς ορίσατε!";
             break;
         case "russo":
-            saudacao = "Привет, добро пожаловать!"
+            saudacao = "Привет, добро пожаловать!";
             break;
         case "japones":
-            saudacao = "こんにちは、ようこそ！"
+            saudacao = "こんにちは、ようこそ！";
             break;
         case "chines":
-            saudacao = "你好，欢迎！"
+            saudacao = "你好，欢迎！";
             break;
     }
 

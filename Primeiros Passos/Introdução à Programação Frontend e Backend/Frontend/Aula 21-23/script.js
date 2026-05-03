@@ -69,7 +69,7 @@ for (let carro of garagem) {
     let propriedades = "";
 
     for (let prop in carro) {
-        propriedades += carro[prop] + " | "
+        propriedades += carro[prop] + " | ";
     }
 
     dados += "<p>" + propriedades + "</p>";
@@ -84,7 +84,7 @@ carros.forEach((carro) => {
      dados += "<p>" + carro + "</p>";
 })
 
-criarSecao("Loop 'forEach'", dados)
+criarSecao("Loop 'forEach'", dados);
 
 // "break" serve para parar o laço de repetição.
 // "continue" serve para pular para a próxima instrução depois do continue, conseguindo ignorar certos valores.
