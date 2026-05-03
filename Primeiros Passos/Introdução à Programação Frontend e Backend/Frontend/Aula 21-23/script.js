@@ -49,14 +49,42 @@ for (carro of carros) {
 
 criarSecao("Loop For Of", dados);
 
-let veiculoA = { 
+let veiculoA = {
     marca: 'Honda', modelo: "Civic Type-R", ano: 2023, cor: "Prata"
 }
 
-let veiculoB = { 
+let veiculoB = {
     marca: 'Mitsubishi', modelo: "Lancer Evo", ano: 2012, cor: "Preto"
 }
 
 let garagem = [];
 garagem.push(veiculoA, veiculoB);
+
 console.log(garagem);
+
+dados = "";
+
+for (let carro of garagem) {
+
+    let propriedades = "";
+
+    for (let prop in carro) {
+        propriedades += carro[prop] + " | "
+    }
+
+    dados += "<p>" + propriedades + "</p>";
+
+}
+
+criarSecao("Loop For In", dados);
+
+dados = "";
+
+carros.forEach((carro) => {
+     dados += "<p>" + carro + "</p>";
+})
+
+criarSecao("Loop 'forEach'", dados)
+
+// "break" serve para parar o laço de repetição.
+// "continue" serve para pular para a próxima instrução depois do continue, conseguindo ignorar certos valores.
