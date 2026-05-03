@@ -1,5 +1,5 @@
 REQUISITOS DO DESAFIO DA AULA 19 - Introdução à Manipulação de Elementos de Páginas Web e Switch-Case
 
-1. criar um arquivo .html com tags: h1, select, option para escolha de idiomas, button e p;
-2. criar o .js com a variável que receberá o  idioma selecionado e outra variável para representar a saudação na página;
-3. utlize switch case;
+1. criar um arquivo .html com tags: h1, select, option para escolha de idiomas, button e p; ✅
+2. criar o .js com a variável que receberá o  idioma selecionado e outra variável para representar a saudação na página; ✅
+3. utlize switch case; ✅
