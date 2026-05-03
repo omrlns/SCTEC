@@ -1,0 +1,8 @@
+REQUISITOS DO DESAFIO DA AULA 20 - Arrays na Prática: Manipule Listas em JavaScript
+
+1. criar um array chamado frutas e adicionar cinco frutas diferentes a ele; ✅
+2. utilizar console.log() para exibir o array completo; ✅
+3. acessar o terceiro item do array usando seu indíce e exibi-lo usando console.log(); ✅
+4. alterar o segundo item do array para uma fruta diferente e mostrar o array atualizado; ✅
+5. adicionar mais duas frutas ao final do array usando o método .push(); ✅
+6. exibir todas as frutas do array; ✅
