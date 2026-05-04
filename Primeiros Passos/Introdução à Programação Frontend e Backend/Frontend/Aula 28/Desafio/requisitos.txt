@@ -1,0 +1,7 @@
+REQUISITOS DO DESAFIO DA AULA 27 - Validação de Formulários com JavaScript
+
+1. criar um site simples com 3 campos de input, para o preenchimento do:
+    - email
+    - número de telefone
+    - senha
+2. valide com JavaScript e regex o email, telefone e senha.
