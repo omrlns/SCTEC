@@ -1,0 +1,9 @@
+REQUISITOS DO DESAFIO DA AULA 25 - Funções e Eventos [2/2]
+
+1. criar uma função clientePedido() que receba um parâmetro numPedido;
+2. dentro dessa função, considere as condições a seguir:
+    - SE numPedido for igual a 1, retorne a mensagem "PIZZA DE CALABRESA";
+    - SE numPedido for igual a 2, retorne a mensagem "PIZZA DE QUATRO QUEIJOS";
+    - SE numPedido for igual a 3, retorne a mensagem "PIZZA DE FRANGO COM CATUPIRY";
+    - SE numPedido for igual a 4, retorne a mensagem "PIZZA DE BRIGADEIRO";
+    - SE numPedido não entrar nas condições acima, retorne a mensagem "NÚMERO DE PEDIDO INVÁLIDO!". 
