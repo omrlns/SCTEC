@@ -1,0 +1,7 @@
+REQUISITOS DO DESAFIO DA AULA 27 - Manipulação do DOM: Criando um Jogo da Velha [2/2]
+
+1. criar um arquivo .html e adicionar um elemento h1, um campo input para o usuário digitar a tarefa, com id nesse elemento.
+    adicionar um botão para que o usuário possa adicionar uma tarefa na lista.
+2. adicionar uma lista não ordenada, tag <ul> com id, nesse elemento serão adicionadas as tarefas que o usuário digitar.
+3. manipular o DOM da página, criar uma função que pega o valor digitado e criar um novo elemento, tag <li> dentro da tag lista não ordenada.
+    adicionar um evento no botão que acione a função que você criou.
