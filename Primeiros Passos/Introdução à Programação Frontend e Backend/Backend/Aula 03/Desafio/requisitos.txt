@@ -1,7 +1,7 @@
-REQUISITOS DO DESAFIO DA AULA 04 - Assincronia no JavaScript: Eficiência e Performance com Promises e JSON [1/2]
+REQUISITOS DO DESAFIO DA AULA 04 - Assincronia no JavaScript: Eficiência e Performance com Promises e JSON [2/2]
 
 1. declarar uma função chamada carregarProduto(id), que recebe um parâmetro de id e retorna uma nova promisse com setTimeout,
-    que simula o atraso de 2 segundos e após esse tempo, cria o objeto com id, nome e preco;
+    que simula o atraso de 2 segundos e após esse tempo, cria o objeto com id, nome e preco; ✅
 2. chamar e invocar essa função carregarProduto(1) usando o .then para processar o produto. 
-    converta para JSON, imprima e reverta para objeto. use o try catch para lidar com erros.
-3. depois, reescrever essa função usando asyn/await que recebe um id e também use try catch para tratar erros.
+    converta para JSON, imprima e reverta para objeto. use o try catch para lidar com erros.✅
+3. depois, reescrever essa função usando asyn/await que recebe um id e também use try catch para tratar erros. ✅
