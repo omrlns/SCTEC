@@ -1,0 +1,7 @@
+REQUISITOS DO DESAFIO DA AULA 07 - CommonJS e Modularização: Criando Códigos Reutilizáveis
+
+1. criar um módulo calculadora
+    - incluir funções básicas de matemática (soma, subtração, multiplicação e divisão);
+    - cada função deve ser exportada individualmente pelo módulo;
+    - utilizar esse módulo no arquivo app.js, realizando algumas operações e imprimindo resultados.
+    
