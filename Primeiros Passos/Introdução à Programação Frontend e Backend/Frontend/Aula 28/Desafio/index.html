@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SCTEC - Desafio Aula 28</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="card-container">
+        <h1>Validação de Cadastro</h1>
+        <div class="quote-container">
+            <blockquote>
+                Resolução do <span class="bold">SCTEC - Desafio da Aula 28</span>. 
+                O objetivo é validar os campos de e-mail, telefone e senha utilizando <span class="bold">JavaScript</span> e <span class="bold">Regex</span>.
+            </blockquote>
+        </div>
+
+        <div class="formulario">
+            <div class="campo">
+                <label for="email">E-mail:</label>
+                <input type="email" id="email" placeholder="SEU@EMAIL.COM">
+            </div>
+            <div class="campo">
+                <label for="telefone">Telefone:</label>
+                <input type="text" id="telefone" placeholder="(99) 99999-9999">
+            </div>
+            <div class="campo">
+                <label for="senha">Senha:</label>
+                <input type="password" id="senha" placeholder="NO MÍN. 6 CARACTERES">
+            </div>
+            <button id="btnValidar">Validar Dados</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
