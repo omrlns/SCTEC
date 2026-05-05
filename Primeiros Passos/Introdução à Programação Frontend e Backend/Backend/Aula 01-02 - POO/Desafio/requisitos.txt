@@ -1,0 +1,8 @@
+REQUISITOS DO DESAFIO DA AULA 02 - Programação Orientada a Objetos [2/2]
+
+1. criar a classe produto com as propriedades nome e preço;
+2. adicionar o méotodo mostrarDetalhes para exibir as informações do produto;
+3. instanciar um objeto de produto e chamar o método mostrarDetalhes;
+4. criar a classe eletronico que herda produto e adicionar a propriedade garantia;
+5. sobrescrever o método mostrarDetalhes para incluir garantia;
+6. instanciar um objeto de eletronico e chamar o método mostrarDetalhes;
