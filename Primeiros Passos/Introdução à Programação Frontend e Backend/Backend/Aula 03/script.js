@@ -1,7 +1,7 @@
 // setTimeout e setInterval
 
 function alerta() {
-    // console.log("Alerta!");
+    console.log("Alerta!");
 }
 
 // 1º modelo
@@ -9,12 +9,12 @@ setTimeout(alerta, 3000);
 
 // 2º modelo
 setTimeout(() => {
-    // console.log("Alerta!");
+    console.log("Alerta!");
 }, 3000);
 
 
 setInterval(() => {
-    // console.log("Alerta!");
+    console.log("Alerta!");
 }, 3000);
 
 console.log("---------- ÍNICIO DA EXECUÇÃO ----------")
@@ -39,7 +39,7 @@ function buscaDadosDoServidor() {
 buscaDadosDoServidor().then((mensagem) => {
     // console.log(mensagem);
 }).catch((erro) => {
-//   console.log(erro);  
+      console.log(erro);
 });
 
 const funcaoAssincrona = async () => {
@@ -47,7 +47,7 @@ const funcaoAssincrona = async () => {
         const resultado = await buscaDadosDoServidor();
         console.log(resultado);
     }
-    catch(erro) {
+    catch (erro) {
         console.log(erro)
     }
 }
@@ -55,3 +55,18 @@ const funcaoAssincrona = async () => {
 funcaoAssincrona();
 
 console.log("---------- FIM DA EXECUÇÃO ----------")
+
+const produtos = [
+    { id: 1, nome: "Camiseta", preco: 89.99 },
+    { id: 2, nome: "Calça", preco: 150.00 },
+    { id: 3, nome: "Bermuda", preco: 68.99 }
+];
+
+const produtosJson = JSON.stringify(produtos);
+
+console.log(produtos);
+console.log(produtosJson);
+
+const produtosObj = JSON.parse(produtosJson);
+
+console.log(produtosObj);
