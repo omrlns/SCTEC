@@ -1,4 +1,4 @@
-import { Request, Response } from "express";
+import type { Request, Response } from "express";
 
 function index(req: Request, res: Response, next: any) {
     res.render("index");
