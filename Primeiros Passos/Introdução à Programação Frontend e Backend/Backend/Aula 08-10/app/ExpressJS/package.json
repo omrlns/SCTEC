@@ -7,11 +7,14 @@
   "type": "module",
   "main": "index.js",
   "scripts": {
-    "start": "tsx watch app.ts"
+    "start": "tsx watch -r dotenv/config app.ts"
   },
   "dependencies": {
+    "dotenv-safe": "^9.1.0",
     "express": "^5.2.1",
-    "pug": "^3.0.4"
+    "mysql2": "^3.22.3",
+    "pug": "^3.0.4",
+    "sequelize": "^6.37.8"
   },
   "devDependencies": {
     "@types/express": "^5.0.6",

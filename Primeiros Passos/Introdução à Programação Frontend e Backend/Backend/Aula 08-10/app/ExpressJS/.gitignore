@@ -8,3 +8,6 @@ out/
 # configurações da IDE
 .vscode/
 .idea/
+
+# variáveis de ambiente
+.env
