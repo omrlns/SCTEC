@@ -10,7 +10,7 @@ head
           // Modal Body
           .modal-body
             //#editForm.form(role='form' method='GET' action='https://www.google.com/')
-            form(role='form' method='POST' action='/edit/' + client.id)
+            form(role='form' method='POST' action='clients/edit/' + client.id)
               div.form-group
                 label(for='name') Nome:
                 input#name.form-control(type='text', placeholder='Digite o seu nome' name='name' value=client.nome)
