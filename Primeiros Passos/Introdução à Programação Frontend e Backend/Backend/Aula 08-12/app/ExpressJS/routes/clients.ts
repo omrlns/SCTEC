@@ -8,15 +8,11 @@ router.get("/", clientsController.index);
 router.get("/create", clientsController.create);
 router.post("/create", clientsController.store);
 
-router.get("/carreira", (req, res) => {
-    res.send("Trabalhe conosco");
-})
+router.get("/:id", clientsController.show);
 
-router.get("/carreira", (req, res) => {
-    res.send("Trabalhe conosco");
-})
-router.get("/contato", (req, res) => {
-    res.send("Contato");
-})
+router.get("/edit/:id", clientsController.edit);
+router.post("/edit/:id", clientsController.update);
+
+router.get("/del/:id", clientsController.del);
 
 export default router;
