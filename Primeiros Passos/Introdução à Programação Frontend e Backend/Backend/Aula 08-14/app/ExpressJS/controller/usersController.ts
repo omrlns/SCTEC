@@ -9,20 +9,27 @@ function login(req: Request, res: Response, next: any) {
 
 async function checkLogin(req: Request, res: Response, next: any) {
     const login = req.body as IUsers;
-    let logado = await usersModel.findOne({
-        where: {
-            user: login.user,
-            password: login.password
+    try {
+
+        let logado = await usersModel.findOne({
+            where: {
+                user: login.user,
+                password: login.password
+            }
+        });
+
+        if (logado != null) {
+            res.redirect("/clients");
         }
-    });
+        else {
+            console.log("SENHA INVÁLIDA!!!")
+        }
 
-    if (logado != null) {
-        res.redirect("/clients");
+    } catch(erro) {
+        console.log(erro);
+        res.status(500).end();
     }
-    else {
-        console.log("SENHA INVÁLIDA!!!")
-    }
+
 }
-
 
 export default { login, checkLogin }
