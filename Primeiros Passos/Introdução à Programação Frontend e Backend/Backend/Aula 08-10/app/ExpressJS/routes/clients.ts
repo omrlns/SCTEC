@@ -1,10 +1,9 @@
 import { Router } from "express";
+import clientsController from "../controller/clientsController.js";
 
 const router = Router();
 
-router.get("/", (req, res) => {
-    res.send("Olá mundo!");
-})
+router.get("/", clientsController.index);
 
 router.get("/sobre", (req, res) => {
     res.send("Rota falando sobre nós");
