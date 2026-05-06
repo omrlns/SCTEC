@@ -5,9 +5,8 @@ const router = Router();
 
 router.get("/", clientsController.index);
 
-router.get("/sobre", (req, res) => {
-    res.send("Rota falando sobre nós");
-})
+router.get("/create", clientsController.create);
+router.post("/create", clientsController.store);
 
 router.get("/carreira", (req, res) => {
     res.send("Trabalhe conosco");

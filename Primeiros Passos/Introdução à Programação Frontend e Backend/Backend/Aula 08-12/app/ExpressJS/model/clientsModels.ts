@@ -16,4 +16,7 @@ export default db.define("client", {
         type: sequelize.STRING,
         allowNull: false
     }
-})
+}, {
+    timestamps: false,
+    freezeTableName: true
+});
