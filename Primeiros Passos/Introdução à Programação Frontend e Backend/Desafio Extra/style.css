@@ -1,0 +1,559 @@
+/* --- definições gerais e tipografia --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    /* rolagem suave */
+}
+
+:root {
+    /* paleta Pink/Rosa baseada na solicitação */
+    --cor-principal: #E91E63;
+    /* pink forte para fundos escuros */
+    --cor-destaque-claro: #F8BBD0;
+    /* rosa claro para spans */
+    --cor-texto-escura: #880E4F;
+    /* rosa bem escuro para títulos em fundo claro */
+    --cor-texto-clara: #FFFFFF;
+    --cor-fundo-alternativo: #FFF0F5;
+    /* lavenderBlush para seções claras */
+
+    --fonte-titulos: "Fredoka", sans-serif;
+    --fonte-geral: "Poppins", sans-serif;
+}
+
+body {
+    font-family: var(--fonte-geral);
+    color: #333;
+    line-height: 1.6;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    font-family: var(--fonte-titulos);
+    font-weight: 600;
+}
+
+h1 {
+    font-size: 48px;
+    margin-bottom: 16px;
+}
+
+h2 {
+    color: var(--cor-texto-escura);
+    font-size: 40px;
+    margin-bottom: 24px;
+    text-align: center;
+}
+
+h3 {
+    color: var(--cor-texto-escura);
+    font-size: 22px;
+    margin-bottom: 8px;
+}
+
+/* --- utilitários --- */
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-left: 24px;
+    padding-right: 24px;
+}
+
+/* identidade Visual - cores */
+.rosa_claro {
+    color: var(--cor-destaque-claro);
+}
+
+.rosa_escura {
+    color: var(--cor-principal);
+}
+
+/* --- cabeçalho --- */
+header {
+    background-color: var(--cor-texto-clara);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    position: sticky;
+    /* menu fixo no topo */
+    top: 0;
+    z-index: 1000;
+}
+
+.logotipo {
+    font-family: var(--fonte-titulos);
+    font-size: 36px;
+    font-weight: bold;
+    color: var(--cor-texto-escura);
+}
+
+.cabecalho {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 24px;
+}
+
+.cabecalho .menu {
+    display: flex;
+    gap: 24px;
+}
+
+.cabecalho .menu a {
+    text-decoration: none;
+    color: var(--cor-texto-escura);
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.cabecalho .menu a:hover {
+    color: var(--cor-principal);
+}
+
+.hamburguer {
+    display: none;
+    /* implementação futura */
+}
+
+/* --- seção hero/destaque --- */
+.hero {
+    background-color: var(--cor-principal);
+    margin: 20px;
+    border-radius: 30px;
+    color: var(--cor-texto-clara);
+    padding: 60px 0;
+    min-height: 70vh;
+    display: flex;
+    align-items: center;
+    overflow: hidden; /* mantém tudo dentro das bordas arredondadas */
+}
+
+.hero_container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* empurra o texto para um lado e a imagem para o outro */
+    gap: 40px; /* cria um respiro entre o texto e a imagem */
+}
+
+.hero_conteudo {
+    flex: 1; /* ccupa 50% do espaço disponível */
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    z-index: 10;
+}
+
+.hero .hero_acoes {
+    align-items: center;
+    display: flex;
+    gap: 16px;
+    margin-top: 16px;
+}
+
+.hero .hero_acoes a {
+    color: var(--cor-texto-clara);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+/* chamadas para ação (CTAs) */
+.hero .hero_acoes button {
+    padding: 16px 32px;
+    background-color: var(--cor-texto-clara);
+    color: var(--cor-principal);
+    border: 0;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 16px;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.hero .hero_acoes button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* ajuste de Posicionamento para o Banner */
+.hero_imagem {
+    flex: 1.2; /* dá um pouco mais de destaque para a imagem da capa */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero_imagem img {
+    width: 100%;
+    max-width: 550px; /* limita o tamanho para não "esmagar" o texto */
+    height: auto;
+    border-radius: 20px; /* ombina com o estilo arredondado do site */
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2); /* profundidade na imagem da capa */
+    filter: none; /* removido o drop-shadow para imagens que não são recortadas */
+}
+
+/* ajuste para telas menores (responsividade) */
+@media (max-width: 992px) {
+    .hero_container {
+        flex-direction: column; /* No celular, coloca a imagem em cima do texto */
+        text-align: center;
+    }
+
+    .hero_imagem {
+        order: -1; /* Garante que a capa apareça primeiro no mobile */
+        margin-bottom: 20px;
+    }
+
+    .hero .hero_acoes {
+        justify-content: center;
+    }
+}
+
+/* --- seção sobre --- */
+.sobre {
+    padding: 64px 0;
+}
+
+.sobre_info {
+    display: flex;
+    align-items: center; /* alinha verticalmente ao centro */
+    justify-content: space-between;
+    gap: 40px; /* espaço entre o texto e a imagem */
+    margin-top: 32px;
+}
+
+.sobre_conteudo {
+    flex: 1; /* ocupa metade do espaço */
+    min-width: 300px;
+}
+
+.sobre_imagem {
+    flex: 1; /* ocupa a outra metade */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sobre_imagem img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 20px; /*bBorda arredondada para combinar com o layout */
+    object-fit: cover;
+}
+
+/* Responsividade: No celular, eles ficam um embaixo do outro */
+@media (max-width: 768px) {
+    .sobre_info {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .sobre_imagem {
+        width: 100%;
+        order: -1; /* Opcional: coloca a imagem acima do texto no celular */
+    }
+}
+
+/* estruturação utilizando Flexbox */
+.sobre_info {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.sobre_info .sobre_conteudo {
+    flex: 1;
+    font-size: 16px;
+}
+
+.sobre_info .sobre_imagem {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+.sobre_info .sobre_imagem img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 20px;
+    border: 8px solid var(--cor-destaque-claro);
+}
+
+/* indicadores */
+.sobre_indicadores {
+    display: flex;
+    gap: 32px;
+    margin-top: 32px;
+    background-color: var(--cor-fundo-alternativo);
+    padding: 20px;
+    border-radius: 15px;
+}
+
+.sobre_indicadores .sobre_indicador_item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1;
+}
+
+.sobre_indicadores .sobre_indicador_item strong {
+    font-family: var(--fonte-titulos);
+    font-size: 48px;
+    color: var(--cor-texto-escura);
+    line-height: 1;
+}
+
+.sobre_indicadores .sobre_indicador_item span {
+    font-size: 14px;
+    text-align: center;
+    font-weight: 500;
+}
+
+/* --- seção de serviços --- */
+.servicos {
+    background-color: var(--cor-fundo-alternativo);
+    padding: 80px 0;
+}
+
+.titulo_secao_escura {
+    color: var(--cor-texto-escura);
+}
+
+/* uso de grid para organização */
+.servicos_container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-top: 40px;
+}
+
+/* uso de cards visuais */
+.service_card {
+    background-color: var(--cor-texto-clara);
+    padding: 40px;
+    border-radius: 20px;
+    text-align: center;
+    transition: box-shadow 0.3s, transform 0.3s;
+    border: 1px solid rgba(233, 30, 99, 0.1);
+
+    /* aplicação de proporções com aspect-ratio */
+    aspect-ratio: 1 / 1;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.service_card:hover {
+    box-shadow: 0 10px 30px rgba(233, 30, 99, 0.1);
+    transform: translateY(-5px);
+}
+
+.service_icon {
+    font-size: 50px;
+    margin-bottom: 20px;
+}
+
+.service_card p {
+    font-size: 14px;
+    color: #666;
+}
+
+/* --- seção de contato --- */
+.contato {
+    background: var(--cor-principal);
+    color: var(--cor-texto-clara);
+    padding: 80px 0;
+}
+
+.contato .titulo_secao {
+    color: var(--cor-texto-clara);
+}
+
+.contato_container {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+    margin-top: 40px;
+}
+
+.contato_info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.contato_info p {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 18px;
+}
+
+.contato_info svg {
+    color: var(--cor-destaque-claro);
+}
+
+/* formulário e interatividade */
+.contato_formulario {
+    flex: 1.2;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    background-color: var(--cor-texto-clara);
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.contato_formulario input,
+.contato_formulario textarea {
+    width: 100%;
+    padding: 16px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    font-family: var(--fonte-geral);
+    font-size: 15px;
+    transition: border-color 0.3s;
+}
+
+.contato_formulario input:focus,
+.contato_formulario textarea:focus {
+    outline: none;
+    border-color: var(--cor-principal);
+}
+
+.contato_formulario button {
+    padding: 16px;
+    width: 100%;
+    border: 0;
+    border-radius: 10px;
+    background-color: var(--cor-principal);
+    color: var(--cor-texto-clara);
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.contato_formulario button:hover {
+    background-color: var(--cor-texto-escura);
+}
+
+.feedback_mensagem {
+    margin-top: 10px;
+    font-size: 14px;
+    text-align: center;
+    min-height: 1em;
+}
+
+.feedback_mensagem.success {
+    color: #2e7d32;
+    /* verde sucesso */
+}
+
+.feedback_mensagem.error {
+    color: #d32f2f;
+    /* vermelho erro */
+}
+
+/* --- rodapé --- */
+.rodape {
+    background-color: var(--cor-fundo-alternativo);
+    padding: 30px 0;
+    text-align: center;
+}
+
+.rodape p {
+    font-size: 14px;
+    color: var(--cor-texto-escura);
+}
+
+/* --- responsividade --- */
+@media (max-width: 992px) {
+    h1 {
+        font-size: 38px;
+    }
+
+    h2 {
+        font-size: 32px;
+    }
+
+    .hero_imagem img {
+        max-height: 50vh;
+    }
+}
+
+@media (max-width: 768px) {
+    .cabecalho .menu {
+        display: none;
+    }
+
+    /* simplificação para mobile */
+
+    .hero {
+        margin: 10px;
+        padding: 40px 0;
+        height: auto;
+        min-height: auto;
+    }
+
+    .hero_container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero .hero_acoes {
+        justify-content: center;
+    }
+
+    /* no formato mobile, removi a posição absoluta para não quebrar o layout */
+    .hero_imagem {
+        position: static;
+        margin-top: 30px;
+        display: flex;
+        justify-content: center;
+    }
+
+    .hero_imagem img {
+        max-height: 300px;
+        width: 100%;
+        height: auto;
+        object-fit: contain;
+    }
+
+    .sobre_info {
+        flex-direction: column-reverse;
+    }
+
+    .sobre_indicadores {
+        gap: 15px;
+        padding: 15px;
+        flex-wrap: wrap;
+    }
+
+    .servicos_container {
+        grid-template-columns: 1fr;
+    }
+
+    .service_card {
+        aspect-ratio: auto;
+        padding: 30px;
+    }
+
+    /* remove aspect-ratio em mobile */
+
+    .contato_container {
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .contato_formulario {
+        padding: 25px;
+    }
+}
